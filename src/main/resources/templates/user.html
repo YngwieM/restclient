@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gebruiker</title>
+</head>
+<body>
+<p th:if="not ${user}">Niet gevonden</p>
+<dl th:if="${user}" th:object="${user.data}">
+    <dt>Nummer</dt>
+    <dd th:text="*{id}"></dd>
+    <dt>Voornaam</dt>
+    <dd th:text="*{firstName}"></dd>
+    <dt>Familienaam</dt>
+    <dd th:text="*{lastName}"></dd>
+</dl>
+</body>
+</html>
