@@ -13,7 +13,7 @@ class DefaultReqResClient implements ReqResClient {
     private final WebClient client;
     private final String eenUserURI;
     DefaultReqResClient(WebClient.Builder builder,
-                        @Value("${reqres.eenUser}") String eenUserURI) {
+                        @Value("reqres.eenUser") String eenUserURI) {
         client = builder.build();
         this.eenUserURI = eenUserURI;
     }
